@@ -10,4 +10,4 @@
 ## Accomplishments that we're proud of _ and _ What we learned
 
 
-## What's next for EBae
+## What's next for The Counselor
