@@ -4,99 +4,220 @@ Survey
     .applyTheme("modern");
 
 var json = {
+    showQuestionNumbers: "off",
     pages: [
         {
-            questions: [
-                {
-                    type: "matrix",
-                    name: "Quality",
-                    title: "Please indicate if you agree or disagree with the following statements",
-                    columns: [
-                        {
-                            value: 1,
-                            text: "Strongly Disagree"
-                        }, {
-                            value: 2,
-                            text: "Disagree"
-                        }, {
-                            value: 3,
-                            text: "Neutral"
-                        }, {
-                            value: 4,
-                            text: "Agree"
-                        }, {
-                            value: 5,
-                            text: "Strongly Agree"
-                        }
-                    ],
-                    rows: [
-                        {
-                            value: "affordable",
-                            text: "Product is affordable"
-                        }, {
-                            value: "does what it claims",
-                            text: "Product does what it claims"
-                        }, {
-                            value: "better then others",
-                            text: "Product is better than other products on the market"
-                        }, {
-                            value: "easy to use",
-                            text: "Product is easy to use"
-                        }
-                    ]
-                }, {
-                    type: "rating",
-                    name: "satisfaction",
-                    title: "How satisfied are you with the Product?",
-                    isRequired: true,
-                    mininumRateDescription: "Not Satisfied",
-                    maximumRateDescription: "Completely satisfied"
-                }, {
-                    type: "rating",
-                    name: "recommend friends",
-                    visibleIf: "{satisfaction} > 3",
-                    title: "How likely are you to recommend the Product to a friend or co-worker?",
-                    mininumRateDescription: "Will not recommend",
-                    maximumRateDescription: "I will recommend"
-                }, {
-                    type: "comment",
-                    name: "suggestions",
-                    title: "What would make you more satisfied with the Product?"
-                }
-            ]
-        }, {
-            questions: [
-                {
-                    type: "radiogroup",
-                    name: "price to competitors",
-                    title: "Compared to our competitors, do you feel the Product is",
-                    choices: ["Less expensive", "Priced about the same", "More expensive", "Not sure"]
-                }, {
-                    type: "radiogroup",
-                    name: "price",
-                    title: "Do you feel our current price is merited by our product?",
-                    choices: ["correct|Yes, the price is about right", "low|No, the price is too low for your product", "high|No, the price is too high for your product"]
-                }, {
-                    type: "multipletext",
-                    name: "pricelimit",
-                    title: "What is the... ",
-                    items: [
-                        {
-                            name: "mostamount",
-                            title: "Most amount you would every pay for a product like ours"
-                        }, {
-                            name: "leastamount",
-                            title: "The least amount you would feel comfortable paying"
-                        }
-                    ]
-                }
-            ]
-        }, {
+            name: "Registration",
+            title: "Registration",
             questions: [
                 {
                     type: "text",
-                    name: "email",
-                    title: "Thank you for taking our survey. Your survey is almost complete, please enter your email address in the box below if you wish to participate in our drawing, then press the 'Submit' button."
+                    name: "fistName",
+                    title: "What is your first name?",
+                    isRequired: true
+                }, {
+                    type: "text",
+                    name: "lastName",
+                    title: "What is your last name?",
+                    isRequired: true
+                }, {
+                    type: "text",
+                    name: "personalEmail",
+                    inputType: "email",
+                    title: "What is your personal email address?",
+                    isRequired: true,
+                    validators: [
+                        {
+                            type: "email"
+                        }
+                    ]
+                }, {
+                    type: "text",
+                    name: "school",
+                    title: "Which school are you currently attending?",
+                }, {
+                    type: "multipletext",
+                    name: "login",
+                    title: "Login",
+                    isRequired: true,
+                    items: [
+                        {
+                            name: "username",
+                            title: "Username: "
+                        }, {
+                            name: "password",
+                            title: "Password: "
+                        }
+                    ]
+                }, {
+                    type: "file",
+                    title: "Please upload your photo",
+                    name: "image",
+                    storeDataAsText: false,
+                    showPreview: true,
+                    imageWidth: 150,
+                    maxSize: 102400
+                }
+            ]
+        }, {
+            name: "Courses",
+            title: "Courses",
+            questions: [
+                {
+                    type: "dropdown",
+                    name: "car",
+                    title: "What is your intended area of study?",
+                    isRequired: true,
+                    colCount: 0,
+                    choices: [
+                        "Agricultural Sciences",
+                        "Anthropology",
+                        "Architecture and Environmental Design",
+                        "Art and Design",
+                        "Biology",
+                        "Business and Economics",
+                        "Chemistry",
+                        "Communications",
+                        "Computer Science",
+                        "Culture and Society",
+                        "Engineering",
+                        "Environmental Studies and Sciences",
+                        "Health and Physical Education",
+                        "History",
+                        "Humanities",
+                        "Languages and Literature",
+                        "Mathematics",
+                        "Media/Film and Television",
+                        "Performing Arts",
+                        "Philosophy",
+                        "Physical Sciences",
+                        "Physics", 
+                        "Political Science",
+                        "Phychology",
+                        "Sociology and Social Sciences",
+                        "Teacher Education",
+                        "Undeclared"
+                    ]
+                }, {
+                    type: "radiogroup",
+                    name: "minUnit",
+                    title: "Have you taken at least 60 semester (90 quarter) units of transferable credit?",
+                    isRequired: true,
+                    choices: [
+                        "Yes", "No"
+                    ]
+                }, {
+                    type: "radiogroup",
+                    name: "note1",
+                    visibleIf: "{minUnit}='No'",
+                    title: "To transfer, you need to complete at least 60 semester (90 quarter) units of transferable credit",
+                    isRequired: true,
+                    choices: ["ok"]
+                }, {
+                    type: "radiogroup",
+                    name: "maxUnit",
+                    title: "Have you taken more than 70 semester (105 quarter) units of transferable credit?",
+                    isRequired: true,
+                    choices: [
+                        "Yes", "No"
+                    ],
+                    colCount: 0
+                }, {
+                    type: "radiogroup",
+                    name: "note2",
+                    title: "You cannot transfer no more than 70 semester (105 quarter) units of transferable credit",
+                    visibleIf: "{maxUnit}='Yes'",
+                    isRequired: true,
+                    choices: ["ok"]
+                },{
+                    type: "multipleText",
+                    name: "passFail",
+                    title: "How many of the completed units were pass/fail?",
+                    colCount: 2,
+                    items: [
+                        {
+                            name: "quarter",
+                            title: "Semester Units: "
+                        },{
+                            name: "semester",
+                            title: "Semester Units: "
+                        }
+                    ]
+                }, {
+                    type: "radiogroup",
+                    name: "q1",
+                    title: "Have you completed at least two transferable courses in English composition?",
+                    choices: [
+                        "Yes", "No"
+                    ]
+                },{
+                    type: "radiogroup",
+                    name: "q2",
+                    title: "Have you completed at least two transferable courses in English composition?",
+                    choices: [
+                        "Yes", "No"
+                    ]
+                },{
+                    type: "radiogroup",
+                    name: "q3",
+                    title: "What transferable college courses have you taken from the following subject areas?",
+                    choices: [
+                        "arts and humanities (UC-H)", "social and behavioral sciences (UC-B)", "physical and biological sciences (UC-S)"
+                    ]
+                }
+            ]
+        }, {
+            name: "Resident",
+            title: "Resident",
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "q4",
+                    title: "Are you a California resident?",
+                    choices: [
+                        "Yes", "No"
+                    ]
+                }, {
+                    type: "radiogroup",
+                    name: "q4a",
+                    title: "Do you have 2.40 GPA or higher?",
+                    visibleIf: "{q4}='Yes'",
+                    choices: [
+                        "Yes", "No"
+                    ]
+                }, {
+                    type: "radiogroup",
+                    name: "note1",
+                    visibleIf: "{q4a}='No'",
+                    title: "To transfer as a California resident, you need at least 2.40 GPA.",
+                    isRequired: true,
+                    choices: ["ok"]
+                }, {
+                    type: "radiogroup",
+                    name: "q4b",
+                    title: "Do you have 2.80 GPA or higher?",
+                    visibleIf: "{q4}='No'",
+                    choices: [
+                        "Yes", "No"
+                    ]
+                }, {
+                    type: "radiogroup",
+                    name: "note1",
+                    visibleIf: "{q4b}='No'",
+                    title: "To transfer as a non-California resident, you need at least 2.80 GPA.",
+                    isRequired: true,
+                    choices: ["ok"]
+                }, {
+                    type: "radiogroup",
+                    name: "q4b",
+                    title: "Would you be open to relocating?",
+                    choices: [
+                        "Yes", "No"
+                    ]
+                }, {
+                    type: "text",
+                    name: "q4b",
+                    title: "What is your zip code?",
                 }
             ]
         }
@@ -155,3 +276,4 @@ survey
         animate("slideUp", 500);
     });
 animate("slideDown", 1000);
+survey.showProgressBar = 'bottom';
