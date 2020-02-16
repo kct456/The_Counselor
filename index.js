@@ -274,6 +274,7 @@ survey
             doAnimantion = true;
         }, 500);
         animate("slideUp", 500);
+        window.location.replace("landing.html");
     });
 animate("slideDown", 1000);
 survey.showProgressBar = 'bottom';

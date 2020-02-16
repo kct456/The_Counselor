@@ -3,8 +3,9 @@
 
 <head>
 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -23,6 +24,18 @@
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.css" rel="stylesheet">
 
+  <!-- Font for profile stuff -->
+  
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+
+  <!-- Stylesheets for profile stuff -->
+  
+  <link href="common-css/bootstrap.css" rel="stylesheet">
+  <link href="common-css/ionicons.css" rel="stylesheet">
+  <link href="common-css/fluidbox.min.css" rel="stylesheet">  
+  <link href="01-cv-portfolio/css/styles.css" rel="stylesheet">
+  <link href="01-cv-portfolio/css/responsive.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -37,107 +50,202 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
+            <a class="nav-link js-scroll-trigger" href="profile.html">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="question.html">Register</a>
+            <a class="nav-link js-scroll-trigger" href="index.html">Sign Out</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Masthead -->
-  <header class="masthead">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">The Counselor</h1>
-        </div>
-        <div style="height:100px"></div>
-        <div class="col-lg-8 align-self-baseline">
-          <p class="font-weight-light mb-5" style="color:white">Democratizing Education & Eliminating Equity Gaps</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="login.html">Login</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section class="page-section bg-primary" id="about">
+  <!-- User's Profile -->
+  <section class="intro-section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">Connect with Friends, <br> Roadmaps to Success, <br> Plan your Future</h2>
-          <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">Let's plan your educational journey together!</p>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="page-section" id="services">
-    <div class="container">
-      <h2 class="text-center mt-0">Built for Students by Students</h2>
-      <hr class="divider my-4">
       <div class="row">
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Free for Students</h3>
-            <p class="text-muted mb-0">you shouldn't need to break the bank to plan your academic future</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-list-alt text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Easy to Navigate</h3>
-            <p class="text-muted mb-0">no waiting for appointments <br> streamlined resources <br> user-friendly</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-calendar text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Plan your Future</h3>
-            <p class="text-muted mb-0">select the area where you want to attend college and build your personally curated plan</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-comments text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Build your Clik</h3>
-            <p class="text-muted mb-0">connect with friends and meet new ones to foster community among those with similar paths</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="col-md-1 col-lg-2"></div>
+        <div class="col-md-10 col-lg-8">
+          <div class="intro">
+            <div class="profile-img"><img src="images/profile-1-250x250.jpg" alt=""></div>
+            <h2><b>Michael Smith</b></h2>
+            <h4 class="font-yellow">mysmith</h4>
+            <ul class="information margin-tb-30">
+              <li><b>SCHOOL : </b>San Jose City College</li>
+              <li><b>EMAIL : </b>michael.smith@sjcc.edu</li>
+              <li><b>INTENDED MAJOR : </b>Computer Science</li>
+            </ul>
+            <ul class="social-icons">
+              <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+              <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+              <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+              <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+            </ul>
+          </div><!-- intro -->
+        </div><!-- col-sm-8 -->
+      </div><!-- row -->
+    </div><!-- container -->
+  </section><!-- intro-section -->
 
-  <!-- Contact Section -->
-  <section class="page-section" id="contact">
+  <section class="about-section section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="mt-0">Contact Us</h2>
-          <hr class="divider my-4">
-          <p class="text-muted mb-5"></p>
-        </div>
-      </div>
       <div class="row">
-        <div class="col-lg-4 ml-auto text-center">
-          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div>+1 (678)-531-5367</div>
-        </div>
-        <div class="col-lg-4 mr-auto text-center">
-          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <a class="d-block" href="mailto:manny.smith@berkeley.edu">manny.smith@berkeley.edu</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="col-sm-4">
+          <div class="heading">
+            <h3><b>GRADMAP</b></h3>
+            <h6 class="font-lite-black"><b>EDUCATION PATH</b></h6>
+          </div>
+        </div><!-- col-sm-4 -->
+        <div class="col-sm-8">
+          <p class="margin-b-50"></p>
+          <p><strong>Complete the following 7-course pattern by the end of the spring term prior to fall enrollment at UC:</strong></p>
+        <ul>
+          <li>Two transferable courses in English composition;</li>
+          <li>One transferable course in mathematical concepts and quantitative reasoning;</li>
+          <li>Four transferable college courses chosen from at least two of the following subject areas:
+        <ul>
+          <li>arts and humanities</li>
+          <li>social and behavioral sciences</li>
+          <li>physical and biological sciences</li>
+        </ul>
+        </li>
+        </ul>
+        <br>
+        <p style="padding-left: 60px;"><em>For example:</em></p>
+        <p style="padding-left: 60px;"><em>3 chemistry courses and 1 history course OR</em><br/> <em>2 sociology courses, 1 physics course, and 1 art history course OR</em><br/> <em>1 biology course and 3 literature courses</em></p>
+        <br> <br>
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="radial-prog-area margin-b-30">
+                <div class="radial-progress" data-prog-percent="0.0">
+                  <div></div>
+                  <h6 class="progress-title">ENGLISH</h6>
+                </div>
+              </div><!-- radial-prog-area-->
+            </div><!-- col-sm-6-->
+          
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="radial-prog-area margin-b-30">
+                <div class="radial-progress" data-prog-percent="1.00">
+                  <div></div>
+                  <h6 class="progress-title">MATH</h6>
+                </div>
+              </div><!-- radial-prog-area-->
+            </div><!-- col-sm-6-->
+            
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="radial-prog-area margin-b-30">
+                <div class="radial-progress" data-prog-percent=".50">
+                  <div></div>
+                  <h6 class="progress-title">OTHER REQS</h6>
+                </div>
+              </div><!-- radial-prog-area-->
+            </div><!-- col-sm-6-->
+            
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="radial-prog-area margin-b-50">
+                <div class="radial-progress" data-prog-percent=".67">
+                  <div></div>
+                  <h6 class="progress-title">MAJOR REQS</h6>
+                </div>
+              </div><!-- radial-prog-area-->
+            </div><!-- col-sm-6-->
+          
+          </div><!-- row -->
+        </div><!-- col-sm-8 -->
+      </div><!-- row -->
+    </div><!-- container -->
+  </section><!-- about-section -->
+
+  <section class="education-section section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="heading">
+            <h3><b>Education</b></h3>
+            <h6 class="font-lite-black"><b>ACADEMIC CAREER</b></h6>
+          </div>
+        </div><!-- col-sm-4 -->
+        <div class="col-sm-8">
+          <div class="education-wrapper">
+            <div class="education margin-b-50">
+              <h4><b>SPRING 2020</b></h4>
+              <h5 class="font-yellow"><b>English, Arts & Humanities, Physical & Biological Sciences, Computer Science</b></h5>
+              <h6 class="font-lite-black margin-t-10">TAKE 4 COURSES</h6>
+              <p class="margin-tb-30">
+                <ul>
+                  <li>ENGL-1A: English Composition</li><br>
+                  <li>Any UC-H course (for example, ETH-20: African American Culture)</li><br>
+                  <li>GEOG-10: Introduction to Physical Geography</li><br>
+                  <li>CIS-54: C/C++ Programming</li><br>
+                </ul>
+              </p>
+            </div><!-- education -->
+            
+            <div class="education margin-b-50">
+              <h4><b>FALL 2020</b></h4>
+              <h5 class="font-yellow"><b>English, Physical & Biological Sciences, Computer Science</b></h5>
+              <h6 class="font-lite-black margin-t-10">TAKE 4 COURSES</h6>
+              <p class="margin-tb-30">
+                <ul>
+                  <li>ENGL-1A: English Composition</li><br>
+                  <li>ENVIR-10: Environmental Science</li><br>
+                  <li>CIS-84: Java Programming</li><br>
+                  <li>CIS-59: Object Oriented Design and Programming</li><br>
+                </ul>
+              </p>
+            </div><!-- education -->
+
+            <div class="education margin-b-50">
+              <h4><b>Prepare Transfer Application</b></h4>
+              <h5 class="font-yellow"><b>Personal Insight Questions</b></h5>
+              <h6 class="font-lite-black margin-t-10">WRITE 3/7 QUESTIONS</h6>
+              <p class="margin-tb-30">
+                Click <a href="https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-transfer/personal-insight-questions.html">here</a> to view the questions.
+              </p>
+            </div><!-- education -->
+          </div><!-- education-wrapper -->
+        </div><!-- col-sm-8 -->
+      </div><!-- row -->
+    </div><!-- container -->
+    
+  </section><!-- about-section -->
+  
+  <section class="counter-section" id="counter">
+    <div class="container">
+      <div class="row">
+      
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="counter margin-b-30">
+            <h1 class="title"><b><span class="counter-value" data-duration="400" data-count="15">0</span></b></h1>
+            <h5 class="desc"><b>Students in Your Clik</b></h5>
+          </div><!-- counter -->
+        </div><!-- col-md-3-->
+        
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="counter margin-b-30">
+            <h1 class="title"><b><span class="counter-value" data-duration="1400" data-count="17">0</span></b></h1>
+            <h5 class="desc"><b>Eligible Degree Options</b></h5>
+          </div><!-- counter -->
+        </div><!-- col-md-3-->
+        
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="counter margin-b-30">
+            <h1 class="title"><b><span class="counter-value" data-duration="700" data-count="12">0</span></b></h1>
+            <h5 class="desc"><b>Courses Completed</b></h5>
+          </div><!-- counter -->
+        </div><!-- col-md-3-->
+        
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="counter margin-b-30">
+            <h1 class="title"><b><span class="counter-value" data-duration="2000" data-count="8">0</span></b></h1>
+            <h5 class="desc"><b>Courses <br> To Go</b></h5>
+          </div><!-- margin-b-30 -->
+        </div><!-- col-md-3-->
+        
+      </div><!-- row-->
+    </div><!-- container-->
+    </section><!-- counter-section-->
 
   <!-- Footer -->
   <footer class="bg-light py-5">
@@ -155,6 +263,24 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
+
+  <!-- SCIPTS -->
+  
+  <script src="common-js/jquery-3.2.1.min.js"></script>
+  
+  <script src="common-js/tether.min.js"></script>
+  
+  <script src="common-js/bootstrap.js"></script>
+  
+  <script src="common-js/isotope.pkgd.min.js"></script>
+  
+  <script src="common-js/jquery.waypoints.min.js"></script>
+  
+  <script src="common-js/progressbar.min.js"></script>
+  
+  <script src="common-js/jquery.fluidbox.min.js"></script>
+  
+  <script src="common-js/scripts.js"></script>
 
 </body>
 
